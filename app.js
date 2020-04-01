@@ -46,27 +46,28 @@ const employeeQuestions = [
     },
     {
         type: "list",
-        message: "What is your role>",
-        name: ["engineer", "intern"]
+        name: "role",
+        message: "What is your role?",
+        choices: ["engineer", "intern"]
     }
+    .then(function(input){
+        if (input.name === "engineer"){
+            return {
+                type: "input",
+                name: "github",
+                message: "What is your gitHub username?"
+            }
+        }else {
+            return {
+                type: "input",
+                name: "school",
+                message: "What is the name of your schooL?",
+            }
+        }
+    })
+    
 ]
-const internQuestions = [
-    {
-        type: "input",
-        message: "Please enter intern name.",
-        name: "name",   
-    },
-    {
-        type: "input",
-        message: "Please enter intern email",
-        name: "email"
-    },
-    {
-        type: "list",
-        message: "What is your role>",
-        name: ["engineer", "intern"]
-    }
-]
+
 
 
 ​

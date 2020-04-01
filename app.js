@@ -64,10 +64,15 @@ const employeeQuestions = [
                 message: "What is the name of your schooL?",
             }
         }
-    })
+    }),
+    {
+        type: "list",
+        name: "addAnother",
+        message: "Would you like to add another team member?",
+        choices: ["Yes", "No"]
+    }
     
 ]
-
 
 
 ​
